@@ -31,32 +31,8 @@ function MainScreen () {
                 </MainNav>
             </Router>
             
-            
-            <div>
-                <img src={image} width={width} height={height-25}/>
-                <MainText>
-                    {/* <h3> HI, MY NAME IS JEFFREY CHAN </h3>
-                    <p>
-                        <Typical
-                            loop = {Infinity}
-                            wrapper ="b"
-                            steps={[
-                                "Computer Science Student",
-                                1500,
-                                "Aspiring Web Developer",
-                                1500,
-                                "Gamer",
-                                1500,
-                                "Problem Solver",
-                                1500,
-                                "Purchases Usless Things",
-                                1500
-                            ]
-                            }
-                        />
-                    </p> */}
-                </MainText>
-            </div>
+
+            <img src={image} width={width} height={height-25}/>
             
             
             {Hub.map((hub) => {
@@ -92,7 +68,7 @@ function MainScreen () {
                         </Button>
                     </Tooltip>
                     <Tooltip title="About Me">
-                        <Button href="google.com">
+                        <Button>
                             <Icon5>
                                 <img src="https://img.icons8.com/office/400/ffffff/console.png"/>
                             </Icon5>
@@ -105,17 +81,12 @@ function MainScreen () {
                             </Icon6>
                         </Button>
                     </Tooltip>
-                    
-
-                    
                 </BottomBar>
 
                 )
             })
             }
         </div>
-        
-        
         </>
     );
     
