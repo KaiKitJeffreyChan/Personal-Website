@@ -9,7 +9,6 @@ function MainNav() {
     return (
         <>
             <ParentContainer>
-
             </ParentContainer>
         </>
     )

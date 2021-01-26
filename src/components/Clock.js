@@ -11,7 +11,7 @@ function Clock() {
     }, []);
 
     return (
-        <div style={{fontSize:"14px", color: "white"}}>
+        <div style={{fontSize:"13px", color: "white"}}>
             {clockState}
         </div>
     )

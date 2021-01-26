@@ -16,13 +16,22 @@ function MainNav() {
             height: "25px"
         }}>
             <Navbar.Brand href="#home">
-                <img src="https://img.icons8.com/metro/26/ffffff/mac-os.png" width="15px" height="15px" />
+                <Apple>
+                    <img src="https://img.icons8.com/metro/26/ffffff/mac-os.png" width="15px" height="15px" />
+                </Apple>
                 
             </Navbar.Brand>
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">
-                <Clock>
+                <Wifi>
+                    <img src="https://img.icons8.com/android/24/ffffff/wifi.png" width="16px" height="16px"/>
+                </Wifi>
                     
+                <Sound>
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/room-sound.png" width="13px" height="13px"/> 
+                </Sound>
+                
+                <Clock>
                 </Clock>
                 
             </Navbar.Collapse>
@@ -31,10 +40,23 @@ function MainNav() {
         </>
     )
 }
-
 const ParentContiner = styled.div`
-  background-color: rgba(0,0,0, 0.7);
+  background-color: rgba(0,0,0);
+  opacity: 0.70;
 `
+const Apple = styled.div`
+
+  padding-bottom: 0.3rem;
+`
+const Wifi = styled.div`
+  padding-right: 0.6rem;
+  padding-bottom: 0.2rem;
+`
+const Sound = styled.div`
+  padding-right: 0.5rem;
+  padding-bottom: 0.2rem
+`
+
 
 
 export default MainNav;

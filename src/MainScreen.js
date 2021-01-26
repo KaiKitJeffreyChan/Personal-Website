@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import  MainNav from "./components/Navbar";
 import image from "./pictures/bg.jpg";
+import { Button, Tooltip } from '@material-ui/core';
+import Typical from 'react-typical'
 
 
 function useWindowSize() {
@@ -17,25 +19,94 @@ function useWindowSize() {
 }
 
 function MainScreen () {
-
     const [height, width] = useWindowSize();
     return (
         <>
         <div className="Background">
             <Router>
-                <MainNav style={{ opacity: "0.1" }}>
+                <MainNav>
                 <Switch>
                     
                 </Switch>
                 </MainNav>
             </Router>
-
-            <img src={image} width={width} height={height-25}/>
-
+            
+            
+            <div>
+                <img src={image} width={width} height={height-25}/>
+                <MainText>
+                    {/* <h3> HI, MY NAME IS JEFFREY CHAN </h3>
+                    <p>
+                        <Typical
+                            loop = {Infinity}
+                            wrapper ="b"
+                            steps={[
+                                "Computer Science Student",
+                                1500,
+                                "Aspiring Web Developer",
+                                1500,
+                                "Gamer",
+                                1500,
+                                "Problem Solver",
+                                1500,
+                                "Purchases Usless Things",
+                                1500
+                            ]
+                            }
+                        />
+                    </p> */}
+                </MainText>
+            </div>
+            
+            
             {Hub.map((hub) => {
             return (
 
-                <BottomBar >
+                <BottomBar>
+                    <Tooltip disableAutoFocus={true} title="Finder">
+                        <Button>
+                            <Icon1>
+                                <img src="https://img.icons8.com/color/512/ffffff/mac-logo.png"/>
+                            </Icon1>
+                        </Button>
+                    </Tooltip>
+                    <Tooltip title="GitHub">
+                        <Button target="_blank" href="https://github.com/KaiKitJeffreyChan">
+                            <Icon2>
+                                <img src="https://img.icons8.com/fluent/500/ffffff/github.png"/>
+                            </Icon2>
+                        </Button>
+                    </Tooltip>
+                    <Tooltip title="Email">
+                        <Button>
+                            <Icon3>
+                                <img src="https://img.icons8.com/fluent/500/ffffff/gmail--v1.png"/>
+                            </Icon3>
+                        </Button>
+                    </Tooltip>
+                    <Tooltip title="Linkedin">
+                        <Button target="_blank" href="https://www.linkedin.com/in/jeffrey-chan-9974711ab/"> 
+                            <Icon4>
+                                <img src="https://img.icons8.com/fluent/500/ffffff/linkedin.png"/>
+                            </Icon4>    
+                        </Button>
+                    </Tooltip>
+                    <Tooltip title="About Me">
+                        <Button href="google.com">
+                            <Icon5>
+                                <img src="https://img.icons8.com/office/400/ffffff/console.png"/>
+                            </Icon5>
+                        </Button>
+                    </Tooltip>
+                    <Tooltip title="Spotify">
+                        <Button>
+                            <Icon6>
+                                <img src="https://img.icons8.com/fluent/500/ffffff/spotify.png"/>
+                            </Icon6>
+                        </Button>
+                    </Tooltip>
+                    
+
                     
                 </BottomBar>
 
@@ -70,7 +141,75 @@ const BottomBar = styled.div`
   justify-content: center;
 `
 
+const Icon1 = styled.div`
+  position: relative;
+  display: flex;
+  bottom: 0px;
+  right: 5%;
+  width: 45px;
+  height: 45px;
+  border-radius: 7px;
 
+`
+const Icon2 = styled.div`
+  position: relative;
+  display: flex;
+  bottom: 0px;
+  right: 3%;
+  width: 45px;
+  height: 45px;
+  border-radius: 7px;
+
+`
+const Icon3 = styled.div`
+  position: relative;
+  display: flex;
+  bottom: 0px;
+  left: -1%;
+  width: 45px;
+  height: 45px;
+  border-radius: 7px;
+
+`
+const Icon4 = styled.div`
+  position: relative;
+  display: flex;
+  bottom: 0px;
+  left: 1%;
+  width: 45px;
+  height: 45px;
+  border-radius: 7px;
+
+`
+const Icon5 = styled.div`
+  position: relative;
+  display: flex;
+  bottom: 0px;
+  left: 3%;
+  width: 45px;
+  height: 45px;
+  border-radius: 7px;
+ 
+`
+const Icon6 = styled.div`
+  position: relative;
+  display: flex;
+  bottom: 0px;
+  left: 5%;
+  width: 45px;
+  height: 45px;
+  border-radius: 7px;
+
+`
+
+const MainText = styled.div`
+  position: absolute;
+  align-items: flex-start;
+  justify-content: flex-start;
+  top: 20%;
+  left: 15%;
+
+`
 
 
 export default MainScreen;
