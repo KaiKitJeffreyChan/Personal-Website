@@ -6,6 +6,7 @@
 
 .App {
   text-align: center;
+  background-image: url("./pictures/bg.jpg");
 }
 
 .App-logo {

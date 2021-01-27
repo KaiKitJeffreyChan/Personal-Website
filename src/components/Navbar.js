@@ -10,8 +10,6 @@ function MainNav() {
     return (
         <>
         <ParentContiner>
-
-        
         <Navbar bg="darkgrey" variant="dark" style={{
             height: "25px"
         }}>
