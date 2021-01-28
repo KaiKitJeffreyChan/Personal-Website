@@ -3,6 +3,8 @@ import Typical from 'react-typical';
 import styled from 'styled-components';
 
 function TextAnimation() {
+
+    
     return (
         <MainText>
         <strong><h2> HI, MY NAME IS JEFFREY CHAN </h2></strong>
