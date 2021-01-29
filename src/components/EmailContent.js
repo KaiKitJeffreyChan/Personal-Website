@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import styled from 'styled-components';
+import { Form, Button } from 'react-bootstrap';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -34,24 +35,60 @@ export default function EmailContent() {
     
     return (
         <div>
+            {/* <FormSpacing>
+                <Form Submit={sendEmail}>
+                    <Form.Group controlId="formBasicEmail">
+                        <Form.Label>Your Name</Form.Label>
+                        <Form.Control type="text" placeholder="Enter email" name="name"/>
+                    </Form.Group>
 
+                    <Form.Group controlId="formBasicPassword">
+                        <Form.Label>Your Email</Form.Label>
+                        <Form.Control type="email" placeholder="Your Email" name="email"/>
+                    </Form.Group>
+
+                    <Form.Group controlId="formBasicPassword">
+                        <Form.Label>Subject</Form.Label>
+                        <Form.Control type="text" placeholder="Subject" name="subject"/>
+                    </Form.Group>
+
+                    <Form.Group controlId="formBasicPassword">
+                        <Form.Label>Message</Form.Label>
+                        <Form.Control type="password" placeholder="Message" name="message"/>
+                    </Form.Group>
+
+                    <Button variant="primary" type="submit">
+                        Submit
+                    </Button>
+                </Form>
+            </FormSpacing> */}
         <div className="container">
-            <form onSubmit={sendEmail} width="50px">
+            <form onSubmit={sendEmail}>
                     <div className="row pt-6 mx-auto">
                         <div>
-                            <TextField required id="outlined-required" label="Name" variant="outlined" type="text" className="form-control"  name="name" />
+                            <Name>
+                                <TextField required id="outlined-required" label="Name" variant="outlined" type="text" className="form-control"  name="name" />
+                            </Name>
                         </div>
                         <div>
-                            <TextField required id="outlined-required" label="Your Email Address" variant="outlined" type="email" className="form-control" name="email" />     
+                            <Email>
+                                <TextField required id="outlined-required" label="Your Email Address" variant="outlined" type="email" className="form-control" name="email" />
+                            </Email>     
                         </div>
                         <div>
-                            <TextField required id="outlined-required" label="Subject" variant="outlined" type="text" className="form-control"  name="subject" />     
+                            <Subject>
+                                <TextField required id="outlined-required" label="Subject" variant="outlined" type="text" className="form-control"  name="subject" />   
+                            </Subject>  
                         </div >
-                        <div className="col-8 form-group pt-2 mx-auto">
-                            <TextField id="standard-multiline-flexible" label="Message" multiline rowsMax={5} value={value} onChange={handleChange} name="message"/>           
+                        <div>
+                            <Message>
+                                <TextField id="standard-multiline-flexible" label="Message" variant="outlined" multiline rowsMax={5} value={value} onChange={handleChange} name="message"/>    
+                            </Message>       
                         </div>
                         <div className="col-8 pt-3 mx-auto">
-                            <input type="submit" className="btn btn-info" value="Send Message"></input>
+                            <SendMessage>
+                                <input type="submit" className="btn btn-info" value="Send Message"></input>
+                            </SendMessage>
                         </div>
                     </div>
                 </form>
@@ -59,6 +96,42 @@ export default function EmailContent() {
 
             </div>
     )
-
-    
 }
+
+const Name = styled.div`
+    left: 90%;
+    width : 180%;
+    box-sizing: border-box; 
+    justify-content: flex-start;
+
+`
+
+const Email = styled.div`
+    padding-top: 12%;
+    left: 90%;
+    width : 180%;
+    box-sizing: border-box; 
+    justify-content: flex-start;
+`
+    
+const Subject = styled.div`
+    padding-top: 12%;
+    left: 90%;
+    width : 180%;
+    box-sizing: border-box; 
+    justify-content: flex-start;
+`
+const Message = styled.div`
+    padding-top: 12%;
+    left: 90%;
+    width : 300%;
+    box-sizing: border-box; 
+    justify-content: flex-start;
+`
+const SendMessage = styled.div`
+    padding-top: 12%;
+    left: 90%;
+    width : 180%;
+    box-sizing: border-box; 
+    justify-content: flex-start;
+`

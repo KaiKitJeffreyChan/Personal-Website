@@ -1,4 +1,4 @@
-import react from "react"
+import react, { useState, useEffect } from "react"
 import Draggable from 'react-draggable';
 import { Window, TitleBar, Text } from 'react-desktop/macOs';
 import styled from 'styled-components';
@@ -6,17 +6,11 @@ import ProjectConent from './ProjectsContent';
 import EmailContent from "./EmailContent";
 import { Resizable, ResizableBox } from 'react-resizable';
 
-function MyProjectWindow() {
+function MyProjectWindow(props) {
 
     var windowHeight = "500px";
     var windowWidth = "400px";
 
-    const onCloseClick = () =>{
-        console.log("close window")
-    }
-    const onMinimizeClick = () =>{
-        console.log("minmize window")
-    }
     const onMaximizeClick = () =>{
         console.log("hi")
     }
@@ -35,8 +29,8 @@ function MyProjectWindow() {
                             <TitleBar
                                 title= "My Projects"
                                 controls
-                                onCloseClick = {onCloseClick}
-                                onMinimizeClick={onMinimizeClick}
+                                onCloseClick = {props.toggleAppear}
+                                onMinimizeClick={props.toggleAppear}
                                 onMaximizeClick={onMaximizeClick}
                             />
                             <ProjectConent>

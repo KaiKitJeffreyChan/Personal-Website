@@ -5,8 +5,8 @@ import { Button, Tooltip } from '@material-ui/core';
 import styled from 'styled-components';
 import { Window, TitleBar, Text } from 'react-desktop/macOs';
 
-function Bottom() {
-    
+function Bottom(props) {
+
     return (
         <>
             {Hub.map((hub) => {
@@ -14,7 +14,7 @@ function Bottom() {
 
                 <BottomBar>
                     <Tooltip title="My Projects">
-                        <Button >
+                        <Button onClick = {props.toggleAppear}>
                             <Icon1>
                                 <img src="https://img.icons8.com/color/512/ffffff/mac-logo.png"/>
                             </Icon1>
