@@ -8,6 +8,7 @@ import Bottom from './components/Bottom';
 import ProjectConent from './components/ProjectsContent';
 import EmailContent from "./components/EmailContent";
 import {MyProjectWindow, MyEmailWindow} from "./components/DraggableBox";
+import TerminalLine from "./components/Terminal";
 
 function useWindowSize() {
     
@@ -41,20 +42,15 @@ function MainScreen () {
             </Router>
             
             <img src={image} width={width} height={height-25}/>
-            
-            <EmailBox>
-                <button onClick = {toggleAppear}> YOO </button>
-            </EmailBox>
-
-   
+        
             <div>
             {appear ? <MyProjectWindow toggleAppear={toggleAppear} /> : null}
             </div>
-            
-            
+            <TerminalLine/>
+
             <MyEmailWindow/>
             
-            <Bottom toggleAppear={toggleAppear} ></Bottom>
+            <Bottom toggleAppear={toggleAppear}></Bottom>
         </>
     );
 }

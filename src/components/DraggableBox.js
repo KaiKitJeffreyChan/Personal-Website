@@ -17,7 +17,6 @@ function MyProjectWindow(props) {
 
     return(
         <>
-    
             <Draggable bounds="body">
                 <TextBox>
                     <Resizable>
