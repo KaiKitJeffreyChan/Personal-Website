@@ -14,7 +14,7 @@ function Bottom(props) {
 
                 <BottomBar>
                     <Tooltip title="My Projects">
-                        <Button onClick = {props.toggleAppear}>
+                        <Button onClick = {props.toggleProject}>
                             <Icon1>
                                 <img src="https://img.icons8.com/color/512/ffffff/mac-logo.png"/>
                             </Icon1>
@@ -28,7 +28,7 @@ function Bottom(props) {
                         </Button>
                     </Tooltip>
                     <Tooltip title="Email">
-                        <Button>
+                        <Button onClick = {props.toggleEmail}>
                             <Icon3>
                                 <img src="https://img.icons8.com/fluent/500/ffffff/gmail--v1.png"/>
                             </Icon3>
@@ -80,7 +80,7 @@ const BottomBar = styled.div`
   box-sizing: border-box; 
   justify-content: flex-start;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%)
+  transform: translateX(-50%);
 `
 
 const Icon1 = styled.div`

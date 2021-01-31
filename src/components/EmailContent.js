@@ -20,7 +20,7 @@ export default function EmailContent() {
     const handleChange = (event) => {
         setValue(event.target.value);
       };
-    
+
     function sendEmail(e){
         e.preventDefault();
 
@@ -35,60 +35,35 @@ export default function EmailContent() {
     
     return (
         <div>
-            {/* <FormSpacing>
-                <Form Submit={sendEmail}>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Your Name</Form.Label>
-                        <Form.Control type="text" placeholder="Enter email" name="name"/>
-                    </Form.Group>
-
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Your Email</Form.Label>
-                        <Form.Control type="email" placeholder="Your Email" name="email"/>
-                    </Form.Group>
-
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Subject</Form.Label>
-                        <Form.Control type="text" placeholder="Subject" name="subject"/>
-                    </Form.Group>
-
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Message</Form.Label>
-                        <Form.Control type="password" placeholder="Message" name="message"/>
-                    </Form.Group>
-
-                    <Button variant="primary" type="submit">
-                        Submit
-                    </Button>
-                </Form>
-            </FormSpacing> */}
         <div className="container">
             <form onSubmit={sendEmail}>
                     <div className="row pt-6 mx-auto">
                         <div>
                             <Name>
-                                <TextField required id="outlined-required" label="Name" variant="outlined" type="text" className="form-control"  name="name" />
+                                <TextField required id="outlined-multiline-static" fullwidth label="Name" variant="outlined" type="text" className="form-control"  name="name" />
                             </Name>
                         </div>
                         <div>
                             <Email>
-                                <TextField required id="outlined-required" label="Your Email Address" variant="outlined" type="email" className="form-control" name="email" />
+                                <TextField required id="outlined-multiline-static" fullwidth label="Your Email Address" variant="outlined" type="email" className="form-control" name="email" />
                             </Email>     
                         </div>
                         <div>
                             <Subject>
-                                <TextField required id="outlined-required" label="Subject" variant="outlined" type="text" className="form-control"  name="subject" />   
+                                <TextField required id="outlined-multiline-static" fullwidth label="Subject" variant="outlined" type="text" className="form-control"  name="subject" />   
                             </Subject>  
                         </div >
                         <div>
                             <Message>
-                                <TextField id="standard-multiline-flexible" label="Message" variant="outlined" multiline rowsMax={5} value={value} onChange={handleChange} name="message"/>    
-                            </Message>       
+                                <TextField id="outlined-multiline-static" fullwidth label="Message" multiline rows={9} variant="outlined" className="form-control"  name="message"/>  
+                            </Message>   
                         </div>
-                        <div className="col-8 pt-3 mx-auto">
-                            <SendMessage>
+                        <div className="col-8 pt-3 mx-auto" >
+                            <Buttonshift>
                                 <input type="submit" className="btn btn-info" value="Send Message"></input>
-                            </SendMessage>
+                            </Buttonshift>
+
+                            
                         </div>
                     </div>
                 </form>
@@ -103,9 +78,7 @@ const Name = styled.div`
     width : 180%;
     box-sizing: border-box; 
     justify-content: flex-start;
-
 `
-
 const Email = styled.div`
     padding-top: 12%;
     left: 90%;
@@ -123,14 +96,19 @@ const Subject = styled.div`
 `
 const Message = styled.div`
     padding-top: 12%;
-    left: 90%;
-    width : 300%;
-    box-sizing: border-box; 
-    justify-content: flex-start;
+    width : 173%;
 `
 const SendMessage = styled.div`
     padding-top: 12%;
     left: 90%;
+    width : 180%;
+    box-sizing: border-box; 
+    justify-content: flex-start;
+`
+
+const Buttonshift = styled.div`
+    padding-top: 85%;
+  
     width : 180%;
     box-sizing: border-box; 
     justify-content: flex-start;

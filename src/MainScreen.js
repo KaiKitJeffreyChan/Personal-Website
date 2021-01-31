@@ -7,7 +7,8 @@ import image from "./pictures/bg.jpg";
 import Bottom from './components/Bottom';
 import ProjectConent from './components/ProjectsContent';
 import EmailContent from "./components/EmailContent";
-import {MyProjectWindow, MyEmailWindow} from "./components/DraggableBox";
+import MyProjectWindow from "./components/Projects";
+import MyEmailWindow from "./components/Email";
 import TerminalLine from "./components/Terminal";
 
 function useWindowSize() {
@@ -24,12 +25,12 @@ function useWindowSize() {
 
 function MainScreen () {
 
-    
     const [height, width] = useWindowSize();
+    const [Project, setProject] = useState(false);
+    const toggleProject = () => setProject(!Project)
 
-    
-    const [appear, setAppear] = useState(false);
-    const toggleAppear = () => setAppear(!appear)
+    const [Email, setEmail] = useState(false);
+    const toggleEmail = () => setEmail(!Email)
 
     return (
         <>
@@ -40,27 +41,30 @@ function MainScreen () {
                     </Switch>
                 </MainNav>
             </Router>
+
             
             <img src={image} width={width} height={height-25}/>
-        
-            <div>
-            {appear ? <MyProjectWindow toggleAppear={toggleAppear} /> : null}
-            </div>
-            <TerminalLine/>
 
-            <MyEmailWindow/>
-            
-            <Bottom toggleAppear={toggleAppear}></Bottom>
+            {Project ? <MyProjectWindow toggleProject={toggleProject} /> : null}
+
+            {Email ? <MyEmailWindow toggleEmail={toggleEmail} /> : null}
+
+            <MainText>
+                <TerminalLine/>
+            </MainText>
+            <TerminalLine>
+                
+            </TerminalLine>
+
+
+            <Bottom toggleProject={toggleProject} toggleEmail={toggleEmail}/>
         </>
     );
 }
 
 const MainText = styled.div`
-  position: absolute;
-  align-items: flex-start;
-  justify-content: flex-start;
-  top: 20%;
-  left: 15%;
+  top: 0%;
+  left: 0%;
 `
 
 const EmailBox = styled.div`
