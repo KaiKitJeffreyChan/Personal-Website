@@ -26,7 +26,7 @@ function useWindowSize() {
 function MainScreen () {
 
     const [height, width] = useWindowSize();
-    const [Project, setProject] = useState(false);
+    const [Project, setProject] = useState(true);
     const toggleProject = () => setProject(!Project)
 
     const [Email, setEmail] = useState(false);
