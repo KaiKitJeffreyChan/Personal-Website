@@ -8,8 +8,8 @@ import { Resizable, ResizableBox } from 'react-resizable';
 
 function MyProjectWindow(props) {
 
-    var windowHeight = "900px";
-    var windowWidth = "1000px";
+    var windowHeight = "600px";
+    var windowWidth = "600px";
 
     const onMaximizeClick = () =>{
         console.log("hi")

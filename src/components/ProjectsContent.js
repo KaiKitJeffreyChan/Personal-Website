@@ -19,7 +19,7 @@ export default class extends Component {
   renderItems() {
     return [
       this.renderItem(1, 'Covid Inventory Tracker',
-         <><img src={image} height="800px" width="800px"/> <p></p></>),
+         <><img src={image} height="600px" width="600px"/> <p></p></>),
       this.renderItem(2, 'LibGDX Game', <Text>Content 2</Text>),
       this.renderItem(3, 'Website', <Text>Content 3</Text>)
     ];
