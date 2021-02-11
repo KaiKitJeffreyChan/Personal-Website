@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { SegmentedControl, SegmentedControlItem, Text } from 'react-desktop/macOs';
-import image from "../pictures/monke.jpeg";
+import image from "../pictures/Error.png";
 
 export default class extends Component {
   constructor() {
@@ -19,7 +19,7 @@ export default class extends Component {
   renderItems() {
     return [
       this.renderItem(1, 'Covid Inventory Tracker',
-         <img src={image} height="250px" width="350px"/>),
+         <><img src={image} height="250px" width="350px"/> <p>this was a projyct</p></>),
       this.renderItem(2, 'LibGDX Game', <Text>Content 2</Text>),
       this.renderItem(3, 'Website', <Text>Content 3</Text>)
     ];

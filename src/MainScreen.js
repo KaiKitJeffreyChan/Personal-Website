@@ -52,8 +52,8 @@ function MainScreen () {
             <MainText>
                 <TerminalLine/>
             </MainText>
+            
             <TerminalLine>
-                
             </TerminalLine>
 
 

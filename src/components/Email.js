@@ -24,7 +24,7 @@ function MyEmailWindow(props) {
                         resizable 
                         height= {windowHeight}
                         width = {windowWidth}
-                        padding="10px">
+                        >
                         <TitleBar
                             title= "Contact"
                             controls

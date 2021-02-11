@@ -8,8 +8,8 @@ import { Resizable, ResizableBox } from 'react-resizable';
 
 function MyProjectWindow(props) {
 
-    var windowHeight = "500px";
-    var windowWidth = "400px";
+    var windowHeight = "900px";
+    var windowWidth = "1000px";
 
     const onMaximizeClick = () =>{
         console.log("hi")
@@ -19,7 +19,6 @@ function MyProjectWindow(props) {
         <>
             <Draggable bounds="body">
                 <TextBox>
-                    <Resizable>
                         <Window
                             
                             height= {windowHeight}
@@ -35,8 +34,6 @@ function MyProjectWindow(props) {
                             <ProjectConent>
                             </ProjectConent>
                         </Window>
-
-                    </Resizable>
                 </TextBox>
             </Draggable>
 
