@@ -1,27 +1,32 @@
-import React, { Component } from 'react';
-import { SegmentedControl, SegmentedControlItem, Text } from 'react-desktop/macOs';
+import React, { Component } from "react";
+import {
+  SegmentedControl,
+  SegmentedControlItem,
+  Text,
+} from "react-desktop/macOs";
 import image from "../pictures/Error.png";
 
 export default class extends Component {
   constructor() {
     super();
-    this.state = { selected: 1 }
+    this.state = { selected: 1 };
   }
 
   render() {
-    return (
-      <SegmentedControl box>
-        {this.renderItems()}
-      </SegmentedControl>
-    );
+    return <SegmentedControl box>{this.renderItems()}</SegmentedControl>;
   }
 
   renderItems() {
     return [
-      this.renderItem(1, 'Covid Inventory Tracker',
-         <><img src={image} height="500px" width="500px"/> <p></p></>),
-      this.renderItem(2, 'LibGDX Game', <Text>Content 2</Text>),
-      this.renderItem(3, 'Website', <Text>Content 3</Text>)
+      this.renderItem(
+        1,
+        "Covid Inventory Tracker",
+        <>
+          <img src={image} height="500px" width="500px" /> <p></p>
+        </>
+      ),
+      this.renderItem(2, "LibGDX Game", <Text>Content 2</Text>),
+      this.renderItem(3, "Website", <Text>Content 3</Text>),
     ];
   }
 
