@@ -24,7 +24,7 @@ function useWindowSize() {
 
 function MainScreen() {
   const [height, width] = useWindowSize();
-  const [Project, setProject] = useState(true);
+  const [Project, setProject] = useState(false);
   const toggleProject = () => setProject(!Project);
 
   const [Email, setEmail] = useState(false);
@@ -32,25 +32,29 @@ function MainScreen() {
 
   return (
     <>
-      <Router>
-        <MainNav>
-          <Switch></Switch>
-        </MainNav>
-      </Router>
+      {/* <img src={image} width="100%" height="100%" /> */}
+      <div
+        style={{
+          backgroundImage: `url(${image})`,
+          backgroundSize: "100vw 100vh",
+          height: "100vh",
+        }}
+      >
+        <Router>
+          <MainNav>
+            <Switch></Switch>
+          </MainNav>
+        </Router>
+        {Project ? <MyProjectWindow toggleProject={toggleProject} /> : null}
+        {Email ? <MyEmailWindow toggleEmail={toggleEmail} /> : null}
+        <MainText>
+          <TerminalLine />
+        </MainText>
 
-      <img src={image} width={width} height={height - 25} />
+        <TerminalLine></TerminalLine>
 
-      {Project ? <MyProjectWindow toggleProject={toggleProject} /> : null}
-
-      {Email ? <MyEmailWindow toggleEmail={toggleEmail} /> : null}
-
-      <MainText>
-        <TerminalLine />
-      </MainText>
-
-      <TerminalLine></TerminalLine>
-
-      <Bottom toggleProject={toggleProject} toggleEmail={toggleEmail} />
+        <Bottom toggleProject={toggleProject} toggleEmail={toggleEmail} />
+      </div>
     </>
   );
 }

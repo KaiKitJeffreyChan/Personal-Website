@@ -1,12 +1,9 @@
-
-*{
-  font-family: 'IBM Plex Serif', serif;
+* {
+  font-family: "IBM Plex Serif", serif;
 }
-
 
 .App {
   text-align: center;
-  background-image: url("./pictures/bg.jpg");
 }
 
 .App-logo {

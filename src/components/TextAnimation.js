@@ -21,7 +21,7 @@ function TextAnimation() {
             1500,
             "Problem Solver",
             1500,
-            "Purchases Usless Things",
+            "Food Connoisseur",
             1500,
           ]}
         />
