@@ -10,6 +10,7 @@ import EmailContent from "./components/EmailContent";
 import MyProjectWindow from "./components/Projects";
 import MyEmailWindow from "./components/Email";
 import TerminalLine from "./components/Terminal";
+import TextAnimation from "./components/TextAnimation";
 
 function useWindowSize() {
   const [size, setSize] = useState([window.innerHeight]);
@@ -32,29 +33,32 @@ function MainScreen() {
 
   return (
     <>
-      {/* <img src={image} width="100%" height="100%" /> */}
-      <div
-        style={{
-          backgroundImage: `url(${image})`,
-          backgroundSize: "100vw 100vh",
-          height: "100vh",
-        }}
-      >
-        <Router>
-          <MainNav>
-            <Switch></Switch>
-          </MainNav>
-        </Router>
-        {Project ? <MyProjectWindow toggleProject={toggleProject} /> : null}
-        {Email ? <MyEmailWindow toggleEmail={toggleEmail} /> : null}
-        <MainText>
-          <TerminalLine />
-        </MainText>
+      <div className="App">
+        <div
+          style={{
+            backgroundImage: `url(${image})`,
+            backgroundSize: "100vw 100vh",
+            height: "100vh",
+          }}
+        >
+          <div id="topBar">
+            <MainNav>
+              <Switch></Switch>
+            </MainNav>
+          </div>
+          <div id="body">
+            <h3> Welcome </h3>
+            {Project ? <MyProjectWindow toggleProject={toggleProject} /> : null}
+            {Email ? <MyEmailWindow toggleEmail={toggleEmail} /> : null}
+          </div>
 
-        <TerminalLine></TerminalLine>
-
-        <Bottom toggleProject={toggleProject} toggleEmail={toggleEmail} />
+          <div id="bottomBar">
+            <Bottom toggleProject={toggleProject} toggleEmail={toggleEmail} />
+          </div>
+        </div>
       </div>
+
+      {/* <TextAnimation /> */}
     </>
   );
 }

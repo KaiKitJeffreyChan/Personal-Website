@@ -44,77 +44,75 @@ export default function EmailContent() {
 
   return (
     <div>
-      <div className="container">
-        <form onSubmit={sendEmail}>
-          <div className="row pt-6 mx-auto">
-            <div>
-              <Name>
-                <TextField
-                  required
-                  id="outlined-multiline-static"
-                  fullwidth
-                  label="Name"
-                  variant="outlined"
-                  type="text"
-                  className="form-control"
-                  name="name"
-                />
-              </Name>
-            </div>
-            <div>
-              <Email>
-                <TextField
-                  required
-                  id="outlined-multiline-static"
-                  fullwidth
-                  label="Your Email Address"
-                  variant="outlined"
-                  type="email"
-                  className="form-control"
-                  name="email"
-                />
-              </Email>
-            </div>
-            <div>
-              <Subject>
-                <TextField
-                  required
-                  id="outlined-multiline-static"
-                  fullwidth
-                  label="Subject"
-                  variant="outlined"
-                  type="text"
-                  className="form-control"
-                  name="subject"
-                />
-              </Subject>
-            </div>
-            <div>
-              <Message>
-                <TextField
-                  id="outlined-multiline-static"
-                  fullwidth
-                  label="Message"
-                  multiline
-                  rows={9}
-                  variant="outlined"
-                  className="form-control"
-                  name="message"
-                />
-              </Message>
-            </div>
-            <div className="col-8 pt-3 mx-auto">
-              <Buttonshift>
-                <input
-                  type="submit"
-                  className="btn btn-info"
-                  value="Send Message"
-                ></input>
-              </Buttonshift>
-            </div>
+      <form onSubmit={sendEmail}>
+        <div className="row pt-6 mx-auto">
+          <div>
+            <Name>
+              <TextField
+                required
+                id="outlined-multiline-static"
+                fullwidth
+                label="Name"
+                variant="outlined"
+                type="text"
+                className="form-control"
+                name="name"
+              />
+            </Name>
           </div>
-        </form>
-      </div>
+          <div>
+            <Email>
+              <TextField
+                required
+                id="outlined-multiline-static"
+                fullwidth
+                label="Your Email Address"
+                variant="outlined"
+                type="email"
+                className="form-control"
+                name="email"
+              />
+            </Email>
+          </div>
+          <div>
+            <Subject>
+              <TextField
+                required
+                id="outlined-multiline-static"
+                fullwidth
+                label="Subject"
+                variant="outlined"
+                type="text"
+                className="form-control"
+                name="subject"
+              />
+            </Subject>
+          </div>
+          <div>
+            <Message>
+              <TextField
+                id="outlined-multiline-static"
+                fullwidth
+                label="Message"
+                multiline
+                rows={9}
+                variant="outlined"
+                className="form-control"
+                name="message"
+              />
+            </Message>
+          </div>
+          <div className="col-8 pt-3 mx-auto">
+            <Buttonshift>
+              <input
+                type="submit"
+                className="btn btn-info"
+                value="Send Message"
+              ></input>
+            </Buttonshift>
+          </div>
+        </div>
+      </form>
     </div>
   );
 }
@@ -153,8 +151,8 @@ const SendMessage = styled.div`
 `;
 
 const Buttonshift = styled.div`
-  padding-top: 85%;
-
+  padding-top: 80%;
+  padding-left: 3rem;
   width: 180%;
   box-sizing: border-box;
   justify-content: flex-start;
