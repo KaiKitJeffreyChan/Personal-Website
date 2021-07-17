@@ -1,15 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
 import MainScreen from "./MainScreen";
-import Introduction from "./introduction";
 import NotFound from "./404.js";
-import TextAnimation from "./components/TextAnimation";
 
 import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Link,
   Redirect,
 } from "react-router-dom";
 
@@ -18,7 +15,7 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route exact path="/Personal-Website" component={Introduction} />
+          <Route exact path="/Personal-Website" component={MainScreen} />
           <Route
             exact
             path="/Personal-Website/Mainscreen"

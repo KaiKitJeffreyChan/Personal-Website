@@ -4,7 +4,7 @@ import {
   SegmentedControlItem,
   Text,
 } from "react-desktop/macOs";
-import image from "../pictures/Error.png";
+import image from "../../pictures/Error.png";
 
 export default class extends Component {
   constructor() {

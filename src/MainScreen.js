@@ -1,16 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./MainScreen.css";
-import styled from "styled-components";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import MainNav from "./components/Navbar";
+// import styled from "styled-components";
+import MainNav from "./components/navbar/Navbar";
 import image from "./pictures/bg.jpg";
-import Bottom from "./components/Bottom";
-import ProjectConent from "./components/ProjectsContent";
-import EmailContent from "./components/EmailContent";
-import MyProjectWindow from "./components/Projects";
-import MyEmailWindow from "./components/Email";
-import TerminalLine from "./components/Terminal";
-import TextAnimation from "./components/TextAnimation";
+import Bottom from "./components/bottomBar/Bottom";
+import MyProjectWindow from "./components/projects/Projects";
+import MyEmailWindow from "./components/email/Email";
 
 function useWindowSize() {
   const [size, setSize] = useState([window.innerHeight]);
@@ -24,7 +19,7 @@ function useWindowSize() {
 }
 
 function MainScreen() {
-  const [height, width] = useWindowSize();
+  // const [height, width] = useWindowSize();
   const [Project, setProject] = useState(false);
   const toggleProject = () => setProject(!Project);
 
@@ -42,12 +37,11 @@ function MainScreen() {
           }}
         >
           <div id="topBar">
-            <MainNav>
+            {/* <MainNav>
               <Switch></Switch>
-            </MainNav>
+            </MainNav> */}
           </div>
           <div id="body">
-            <h3> Welcome </h3>
             {Project ? <MyProjectWindow toggleProject={toggleProject} /> : null}
             {Email ? <MyEmailWindow toggleEmail={toggleEmail} /> : null}
           </div>
@@ -57,22 +51,8 @@ function MainScreen() {
           </div>
         </div>
       </div>
-
-      {/* <TextAnimation /> */}
     </>
   );
 }
 
-const MainText = styled.div`
-  top: 0%;
-  left: 0%;
-`;
-
-const EmailBox = styled.div`
-  position: absolute;
-  align-items: flex-start;
-  justify-content: flex-start;
-  top: 30%;
-  left: 15%;
-`;
 export default MainScreen;

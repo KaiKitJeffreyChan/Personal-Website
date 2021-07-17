@@ -3,12 +3,12 @@ import Draggable from "react-draggable";
 import { Window, TitleBar, Text } from "react-desktop/macOs";
 import styled from "styled-components";
 import ProjectConent from "./ProjectsContent";
-import EmailContent from "./EmailContent";
+import EmailContent from "../email/EmailContent";
 import { Resizable, ResizableBox } from "react-resizable";
 
-function MyEmailWindow(props) {
-  var windowHeight = "500px";
-  var windowWidth = "400px";
+function MyProjectWindow(props) {
+  var windowHeight = "601px";
+  var windowWidth = "600px";
 
   const onMaximizeClick = () => {
     console.log("hi");
@@ -18,15 +18,15 @@ function MyEmailWindow(props) {
     <>
       <Draggable bounds="body">
         <TextBox>
-          <Window resizable height={windowHeight} width={windowWidth}>
+          <Window height={windowHeight} width={windowWidth} padding="10px">
             <TitleBar
-              title="Contact"
+              title="My Projects"
               controls
-              onCloseClick={props.toggleEmail}
-              onMinimizeClick={props.toggleEmail}
+              onCloseClick={props.toggleProject}
+              onMinimizeClick={props.toggleProject}
               onMaximizeClick={onMaximizeClick}
             />
-            <EmailContent></EmailContent>
+            <ProjectConent></ProjectConent>
           </Window>
         </TextBox>
       </Draggable>
@@ -42,4 +42,4 @@ const TextBox = styled.div`
   left: 0%;
 `;
 
-export default MyEmailWindow;
+export default MyProjectWindow;

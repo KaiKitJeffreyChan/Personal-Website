@@ -1,18 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import {
-  Navbar,
-  Nav,
-  FormControl,
-  Form,
-  Button,
-  Container,
-} from "react-bootstrap";
+import Navbar from "react-bootstrap/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Clock from "./Clock";
 
-function MainNav() {
+const MainNav = () => {
   return (
     <>
       <ParentContiner>
@@ -56,7 +49,7 @@ function MainNav() {
       </ParentContiner>
     </>
   );
-}
+};
 const ParentContiner = styled.div`
   background-color: rgba(0, 0, 0);
   opacity: 0.7;
