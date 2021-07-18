@@ -4,8 +4,7 @@ import "./MainScreen.css";
 import MainNav from "./components/navbar/Navbar";
 import image from "./pictures/bg4.jpg";
 import Bottom from "./components/bottomBar/Bottom";
-import MyProjectWindow from "./components/projects/Projects";
-import MyEmailWindow from "./components/email/Email";
+import MyProjectWindow from "./components/projectWindow/projectWindow";
 
 function useWindowSize() {
   const [size, setSize] = useState([window.innerHeight]);
@@ -21,10 +20,10 @@ function useWindowSize() {
 function MainScreen() {
   // const [height, width] = useWindowSize();
   const [Project, setProject] = useState(false);
-  const toggleProject = () => setProject(!Project);
-
   const [Email, setEmail] = useState(false);
+
   const toggleEmail = () => setEmail(!Email);
+  const toggleProject = () => setProject(!Project);
 
   return (
     <div
@@ -38,10 +37,9 @@ function MainScreen() {
       <div id="topBar">
         <MainNav />
       </div>
-      <div id="body">
-        {Project ? <MyProjectWindow toggleProject={toggleProject} /> : null}
-        {Email ? <MyEmailWindow toggleEmail={toggleEmail} /> : null}
-      </div>
+
+      {Project ? <MyProjectWindow toggleProject={toggleProject} /> : null}
+      {/* {Email ? <MyEmailWindow toggleEmail={toggleEmail} /> : null} */}
 
       <div id="bottomBar">
         <Bottom toggleProject={toggleProject} toggleEmail={toggleEmail} />
