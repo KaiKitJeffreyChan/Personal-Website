@@ -1,6 +1,5 @@
-import react, { useState, useEffect } from "react";
 import Draggable from "react-draggable";
-import { Window, TitleBar, Text } from "react-desktop/macOs";
+import { Window, TitleBar } from "react-desktop/macOs";
 import styled from "styled-components";
 import EmailContent from "./EmailContent";
 

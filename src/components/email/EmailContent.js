@@ -1,27 +1,21 @@
 import React from "react";
 import emailjs from "emailjs-com";
 import TextField from "@material-ui/core/TextField";
-import { makeStyles } from "@material-ui/core/styles";
 import styled from "styled-components";
-import { Form, Button } from "react-bootstrap";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    "& .MuiTextField-root": {
-      margin: theme.spacing(1),
-      width: "25ch",
-    },
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     "& .MuiTextField-root": {
+//       margin: theme.spacing(1),
+//       width: "25ch",
+//     },
+//   },
+// }));
 
 export default function EmailContent() {
-  const classes = useStyles();
-  const [value, setValue] = React.useState("Controlled");
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
+  // const classes = useStyles();
 
-  function sendEmail(e) {
+  const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
@@ -40,7 +34,7 @@ export default function EmailContent() {
         }
       );
     e.target.reset();
-  }
+  };
 
   return (
     <div>
@@ -141,13 +135,6 @@ const Subject = styled.div`
 const Message = styled.div`
   padding-top: 12%;
   width: 173%;
-`;
-const SendMessage = styled.div`
-  padding-top: 12%;
-  left: 90%;
-  width: 180%;
-  box-sizing: border-box;
-  justify-content: flex-start;
 `;
 
 const Buttonshift = styled.div`

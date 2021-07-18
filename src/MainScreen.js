@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./MainScreen.css";
 // import styled from "styled-components";
 import MainNav from "./components/navbar/Navbar";
-import image from "./pictures/bg.jpg";
+import image from "./pictures/bg4.jpg";
 import Bottom from "./components/bottomBar/Bottom";
 import MyProjectWindow from "./components/projects/Projects";
 import MyEmailWindow from "./components/email/Email";
@@ -27,31 +27,26 @@ function MainScreen() {
   const toggleEmail = () => setEmail(!Email);
 
   return (
-    <>
-      <div className="App">
-        <div
-          style={{
-            backgroundImage: `url(${image})`,
-            backgroundSize: "100vw 100vh",
-            height: "100vh",
-          }}
-        >
-          <div id="topBar">
-            {/* <MainNav>
-              <Switch></Switch>
-            </MainNav> */}
-          </div>
-          <div id="body">
-            {Project ? <MyProjectWindow toggleProject={toggleProject} /> : null}
-            {Email ? <MyEmailWindow toggleEmail={toggleEmail} /> : null}
-          </div>
-
-          <div id="bottomBar">
-            <Bottom toggleProject={toggleProject} toggleEmail={toggleEmail} />
-          </div>
-        </div>
+    <div
+      style={{
+        backgroundImage: `url(${image})`,
+        backgroundSize: "100vw 100vh",
+        height: "100vh",
+      }}
+      className="App"
+    >
+      <div id="topBar">
+        <MainNav />
       </div>
-    </>
+      <div id="body">
+        {Project ? <MyProjectWindow toggleProject={toggleProject} /> : null}
+        {Email ? <MyEmailWindow toggleEmail={toggleEmail} /> : null}
+      </div>
+
+      <div id="bottomBar">
+        <Bottom toggleProject={toggleProject} toggleEmail={toggleEmail} />
+      </div>
+    </div>
   );
 }
 

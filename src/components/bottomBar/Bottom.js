@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Button, Tooltip } from "@material-ui/core";
 import styled from "styled-components";
-import { Window, TitleBar, Text } from "react-desktop/macOs";
 
 function Bottom(props) {
   return (
@@ -11,21 +9,30 @@ function Bottom(props) {
       <Tooltip title="My Projects">
         <Button onClick={props.toggleProject}>
           <Icon1>
-            <img src="https://img.icons8.com/color/512/ffffff/mac-logo.png" />
+            <img
+              alt="Finder"
+              src="https://img.icons8.com/color/512/ffffff/mac-logo.png"
+            />
           </Icon1>
         </Button>
       </Tooltip>
       <Tooltip title="GitHub">
         <Button target="_blank" href="https://github.com/KaiKitJeffreyChan">
           <Icon2>
-            <img src="https://img.icons8.com/fluent/500/ffffff/github.png" />
+            <img
+              alt="Github"
+              src="https://img.icons8.com/fluent/500/ffffff/github.png"
+            />
           </Icon2>
         </Button>
       </Tooltip>
       <Tooltip title="Email">
         <Button onClick={props.toggleEmail}>
           <Icon3>
-            <img src="https://img.icons8.com/fluent/500/ffffff/gmail--v1.png" />
+            <img
+              alt="Gmail"
+              src="https://img.icons8.com/fluent/500/ffffff/gmail--v1.png"
+            />
           </Icon3>
         </Button>
       </Tooltip>
@@ -35,21 +42,30 @@ function Bottom(props) {
           href="https://www.linkedin.com/in/jeffrey-chan-9974711ab/"
         >
           <Icon4>
-            <img src="https://img.icons8.com/fluent/500/ffffff/linkedin.png" />
+            <img
+              alt="Linkedin"
+              src="https://img.icons8.com/fluent/500/ffffff/linkedin.png"
+            />
           </Icon4>
         </Button>
       </Tooltip>
       <Tooltip title="About Me">
         <Button>
           <Icon5>
-            <img src="https://img.icons8.com/office/400/ffffff/console.png" />
+            <img
+              alt="Terminal"
+              src="https://img.icons8.com/office/400/ffffff/console.png"
+            />
           </Icon5>
         </Button>
       </Tooltip>
       <Tooltip title="Spotify">
         <Button>
           <Icon6>
-            <img src="https://img.icons8.com/fluent/500/ffffff/spotify.png" />
+            <img
+              alt="Spotify"
+              src="https://img.icons8.com/fluent/500/ffffff/spotify.png"
+            />
           </Icon6>
         </Button>
       </Tooltip>

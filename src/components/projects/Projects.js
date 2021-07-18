@@ -1,10 +1,6 @@
-import react, { useState, useEffect } from "react";
 import Draggable from "react-draggable";
-import { Window, TitleBar, Text } from "react-desktop/macOs";
+import { Window, TitleBar } from "react-desktop/macOs";
 import styled from "styled-components";
-import ProjectConent from "./ProjectsContent";
-import EmailContent from "../email/EmailContent";
-import { Resizable, ResizableBox } from "react-resizable";
 
 function MyProjectWindow(props) {
   var windowHeight = "601px";
@@ -26,7 +22,6 @@ function MyProjectWindow(props) {
               onMinimizeClick={props.toggleProject}
               onMaximizeClick={onMaximizeClick}
             />
-            <ProjectConent></ProjectConent>
           </Window>
         </TextBox>
       </Draggable>
