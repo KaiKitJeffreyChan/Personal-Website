@@ -4,7 +4,7 @@ import "./MainScreen.css";
 import MainNav from "./components/navbar/Navbar";
 import image from "./pictures/bg4.jpg";
 import Bottom from "./components/bottomBar/Bottom";
-import MyProjectWindow from "./components/projectWindow/projectWindow";
+import MyProjectWindow from "./components/projectWindow/ProjectWindow";
 
 function useWindowSize() {
   const [size, setSize] = useState([window.innerHeight]);

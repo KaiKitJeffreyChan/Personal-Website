@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import MainScreen from "./MainScreen";
 import NotFound from "./404.js";
-import Window from "./components/projectWindow/projectWindow";
+import ProjectWindow from "./components/projectWindow/ProjectWindow";
 
 import {
   BrowserRouter as Router,
@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route exact path="/Personal-Website" component={MainScreen} />
+          <Route exact path="/Personal-Website" component={ProjectWindow} />
           <Route
             exact
             path="/Personal-Website/Mainscreen"

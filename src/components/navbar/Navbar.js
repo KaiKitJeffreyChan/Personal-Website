@@ -60,11 +60,11 @@ const Apple = styled.div`
 // `;
 
 const Wifi = styled.div`
-  margin-right: 15px;
+  margin-right: 10px;
   float: right;
 `;
 const Sound = styled.div`
-  margin-right: 15px;
+  margin-right: 10px;
   float: right;
 `;
 

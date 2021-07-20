@@ -74,6 +74,7 @@ function Bottom(props) {
 }
 
 const BottomBar = styled.div`
+  text-align: center;
   position: fixed;
   width: 500px;
   left: 50%;

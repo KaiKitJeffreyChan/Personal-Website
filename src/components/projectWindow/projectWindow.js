@@ -1,11 +1,11 @@
 import { useState } from "react";
 import styled from "styled-components";
 import Draggable from "react-draggable";
+import ProjectContent from "./ProjectContent";
+import ProjectCard from "./ProjectCard";
 
 const Window = (props) => {
   const [currentProject, setCurrentProject] = useState("");
-  const [allProjects, setAllProjects] = useState([]);
-
   const minimizePressed = () => {
     console.log("minimizePressed");
     // setWindowStage("MINIMIZED");
@@ -23,8 +23,11 @@ const Window = (props) => {
             <RedCircle onClick={props.toggleProject} />
             <YellowCircle onClick={minimizePressed} />
             <GreenCircle onClick={maximizePressed} />
+            <Description>My Projects</Description>
           </TopBarComponent>
         </section>
+        <ProjectContent setCurrentProject={setCurrentProject} />
+        <ProjectCard currentProject={currentProject} />
       </MacWindow>
     </Draggable>
   );
@@ -45,6 +48,7 @@ const TopBarComponent = styled.div`
   background-color: rgb(60, 60, 60);
   border-radius: 7px 7px 0 0;
   height: 2rem;
+  text-align: center;
 `;
 
 const RedCircle = styled.div`
@@ -52,8 +56,8 @@ const RedCircle = styled.div`
   height: 12px;
   border-radius: 50%;
   background: rgb(255, 96, 92);
-  margin-left: 15px;
   margin-top: 10px;
+  margin-left: 10px;
   float: left;
 `;
 
@@ -75,6 +79,15 @@ const GreenCircle = styled.div`
   margin-left: 8px;
   margin-top: 10px;
   float: left;
+`;
+
+const Description = styled.p`
+  color: grey;
+  margin-right: 100px;
+  padding-top: 8px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 `;
 
 export default Window;
