@@ -26,8 +26,8 @@ const Window = (props) => {
             <Description>My Projects</Description>
           </TopBarComponent>
         </section>
-        <ProjectContent setCurrentProject={setCurrentProject} />
         <ProjectCard currentProject={currentProject} />
+        <ProjectContent setCurrentProject={setCurrentProject} />
       </MacWindow>
     </Draggable>
   );
