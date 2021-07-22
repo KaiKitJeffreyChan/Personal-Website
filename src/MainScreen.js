@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./MainScreen.css";
 // import styled from "styled-components";
 import MainNav from "./components/navbar/Navbar";
 import image from "./pictures/bg4.jpg";
 import Bottom from "./components/bottomBar/Bottom";
-import MyProjectWindow from "./components/projectWindow/ProjectWindow";
+import ProjectWindow from "./components/projectWindow/ProjectWindow";
+import EmailWindow from "./components/emailWindow/EmailWindow";
 
 function useWindowSize() {
   const [size, setSize] = useState([window.innerHeight]);
@@ -22,8 +22,21 @@ function MainScreen() {
   const [Project, setProject] = useState(false);
   const [Email, setEmail] = useState(false);
 
-  const toggleEmail = () => setEmail(!Email);
-  const toggleProject = () => setProject(!Project);
+  //___________________________________________________________
+  const [openWindows, setOpenWindows] = useState([]);
+
+  //add and remove elements in stack, take most recent to display
+  //if a window wanst open, append to front.
+  //only remove from array if you "open" and its already in array
+  //___________________________________________________________
+
+  const toggleEmail = () => {
+    setEmail(!Email);
+  };
+
+  const toggleProject = () => {
+    setProject(!Project);
+  };
 
   return (
     <div
@@ -35,11 +48,12 @@ function MainScreen() {
       className="App"
     >
       <div id="topBar">
-        <MainNav />
+        <MainNav currentlyPressed={openWindows[0]} />
       </div>
-
-      {Project ? <MyProjectWindow toggleProject={toggleProject} /> : null}
-      {/* {Email ? <MyEmailWindow toggleEmail={toggleEmail} /> : null} */}
+      {Email ? (
+        <EmailWindow toggleEmail={toggleEmail} className="email" />
+      ) : null}
+      {Project ? <ProjectWindow toggleProject={toggleProject} /> : null}
 
       <div id="bottomBar">
         <Bottom toggleProject={toggleProject} toggleEmail={toggleEmail} />

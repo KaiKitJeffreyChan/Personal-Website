@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Clock from "./Clock";
 
-const MainNav = () => {
+const MainNav = ({ currentlyPressed }) => {
   return (
     <>
       <ParentContainer>
@@ -15,6 +15,8 @@ const MainNav = () => {
             height="15px"
           />
         </Apple>
+        <CurrentlyPressed>{currentlyPressed}</CurrentlyPressed>
+
         {/* <Current>
           <p style={{ fontSize: "15px" }}>Hello</p>  //add which element is currently selected
         </Current> */}
@@ -48,11 +50,22 @@ const ParentContainer = styled.div`
 `;
 const Apple = styled.div`
   margin-left: 15px;
+  margin-top: 0;
   padding-bottom: 10px;
   position: relative;
   float: left;
 `;
 
+const CurrentlyPressed = styled.div`
+  margin-left: 15px;
+  padding-bottom: 10px;
+  position: relative;
+  color: white;
+  font-size: 12px;
+  margin-top: 3px;
+  font-weight: bold;
+  float: left;
+`;
 // const Current = styled.div`
 //   margin: 2px 0 0 10px;
 //   float: left;

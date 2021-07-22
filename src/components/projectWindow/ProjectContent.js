@@ -1,16 +1,15 @@
-import { useState, useEffect } from "react";
 import styled from "styled-components";
-import "./ProjectContent.css";
+import "./Project.css";
 
 const ProjectContent = (props) => {
-  const [titles, setTitles] = useState([
+  const titles = [
     "McMaster Course API",
     "Online Live Chat Application",
     "Course Automation",
     "Spotify Player",
     "Hack the North App",
     "Stickfall LibGDX Game",
-  ]);
+  ];
 
   const thisWasClicked = (title) => {
     console.log(title);
@@ -50,9 +49,7 @@ const List = styled.ul`
 
 const Title = styled.li`
   font-size: 14px;
-  color: rgb(160, 160, 160);
-  /* border: 1px solid white; */
-  font-weight: bold;
+  color: rgb(190, 190, 190);
 
   padding: 0.5em 1.25em;
 `;

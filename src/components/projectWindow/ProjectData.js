@@ -21,7 +21,7 @@ const projectData = [
     github: "https://github.com/KaiKitJeffreyChan/Course_Checker",
     description:
       "Using Selenium and Twillio, created an application for students at McMaster, that automates the course enrollment process and sends a SMS when completed",
-    img: "./projectImages/course.png",
+    img: "./course.png",
   },
   {
     id: "spotify",

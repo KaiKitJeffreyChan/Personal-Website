@@ -1,27 +1,15 @@
-import { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import projectData from "./ProjectData";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
+import course_api from "./projectImages/course.png";
+// import spotify from "./projectImages/spotify.png";
+// import stickfall from "./projectImages/stickfall.png";
+// import htn from "./projectImages/htn.png";
+// import course_automation
+// import chat_app
+// import course_automation
 
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 345,
-  },
-  media: {
-    height: 140,
-  },
-});
-//your error is that your first render is gonna be null meaning undefined, find a way
-// to check first and
 const ProjectCard = (props) => {
-  const classes = useStyles();
   const currentSelectedProject = projectData.find(
     (project) => project.name === props.currentProject
   );
@@ -29,40 +17,58 @@ const ProjectCard = (props) => {
   return (
     <CardContainer>
       {currentSelectedProject ? (
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image="/static/images/cards/contemplative-reptile.jpg"
-              title="Contemplative Reptile"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                Lizard
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              Share
-            </Button>
-            <Button size="small" color="primary">
-              Learn More
-            </Button>
-          </CardActions>
-        </Card>
+        <div className="zoom">
+          <Image className="fill">
+            <img src={course_api} alt={currentSelectedProject.name} />
+          </Image>
+          <a
+            href={currentSelectedProject.github}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <TitleText href={currentSelectedProject.github}>
+              {currentSelectedProject.name}
+            </TitleText>
+          </a>
+          <hr style={{ color: "white" }}></hr>
+          <Description>{currentSelectedProject.description}</Description>
+        </div>
       ) : null}
-      {/* {currentSelectedProject.github}
-      {currentSelectedProject.description} */}
     </CardContainer>
   );
 };
 
 const CardContainer = styled.div`
   float: right;
+  padding-top: 30px;
+  padding-right: 44px;
+  margin: 0;
 `;
+
+const Image = styled.div`
+  border: 1px solid rgba(25, 25, 25);
+  height: 350px;
+  width: 400px;
+  margin-bottom: 10px;
+`;
+
+const TitleText = styled.p`
+  position: relative;
+  text-align: left;
+  padding-bottom: 0px;
+  color: white;
+  color: rgb(190, 190, 190);
+`;
+
+const Description = styled.div`
+  height: 90px;
+  width: 400px;
+  font-size: 12px;
+  /* border: 1px solid white; */
+  word-wrap: break-word;
+  float: right;
+  color: rgb(190, 190, 190);
+  position: fixed;
+`;
+
 export default ProjectCard;

@@ -2,17 +2,16 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Tooltip } from "@material-ui/core";
 import styled from "styled-components";
+import finder from "./bottomIcons/mac-logo.png";
 
-function Bottom(props) {
+//import all images before using dont use links
+const Bottom = (props) => {
   return (
     <BottomBar>
       <Tooltip title="My Projects">
         <Button onClick={props.toggleProject}>
           <Icon1>
-            <img
-              alt="Finder"
-              src="https://img.icons8.com/color/512/ffffff/mac-logo.png"
-            />
+            <img alt="Finder" src={finder} />
           </Icon1>
         </Button>
       </Tooltip>
@@ -71,7 +70,7 @@ function Bottom(props) {
       </Tooltip>
     </BottomBar>
   );
-}
+};
 
 const BottomBar = styled.div`
   text-align: center;
@@ -93,7 +92,7 @@ const Icon1 = styled.div`
   position: relative;
   display: flex;
   bottom: 0px;
-  right: 5%;
+
   width: 45px;
   height: 45px;
   border-radius: 7px;

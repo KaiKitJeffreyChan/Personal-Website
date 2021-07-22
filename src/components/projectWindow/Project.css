@@ -1,0 +1,58 @@
+* {
+  cursor: default;
+}
+
+.titles:hover {
+  background-color: grey;
+  color: rgb(60, 60, 60);
+}
+
+.fill {
+  /* check if flex works on safari likely same issue with icons */
+  display: flex;
+  transition: transform 0.2s;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.fill img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.fill:hover {
+  transform: scale(1.2);
+  z-index: -1;
+}
+
+.redButton:hover {
+  background-color: rgb(215, 56, 52);
+}
+
+.yellowButton:hover {
+  background-color: rgb(215, 149, 28);
+}
+
+.greenButton:hover {
+  background-color: rgb(0, 162, 38);
+}
+
+a:link {
+  color: rgb(190, 190, 190);
+}
+
+a:visited {
+  color: rgb(190, 190, 190);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(190, 190, 190);
+  text-decoration: none;
+}
+
+a:active {
+  color: rgb(190, 190, 190);
+  text-decoration: underline;
+}

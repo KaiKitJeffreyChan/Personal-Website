@@ -1,11 +1,10 @@
-import { useState } from "react";
+// import { useState } from "react";
 import styled from "styled-components";
 import Draggable from "react-draggable";
-import ProjectContent from "./ProjectContent";
-import ProjectCard from "./ProjectCard";
+import EmailContent from "./EmailContent";
+import "./Email.css";
 
-const ProjectWindow = (props) => {
-  const [currentProject, setCurrentProject] = useState("");
+const EmailWindow = (props) => {
   const minimizePressed = () => {
     console.log("minimizePressed");
     // setWindowStage("MINIMIZED");
@@ -20,14 +19,13 @@ const ProjectWindow = (props) => {
       <MacWindow>
         <section>
           <TopBarComponent>
-            <RedCircle className="redButton" onClick={props.toggleProject} />
+            <RedCircle className="redButton" onClick={props.toggleEmail} />
             <YellowCircle className="yellowButton" onClick={minimizePressed} />
             <GreenCircle className="greenButton" onClick={maximizePressed} />
-            <Description>My Projects</Description>
+            <Description>Contact</Description>
           </TopBarComponent>
         </section>
-        <ProjectCard currentProject={currentProject} />
-        <ProjectContent setCurrentProject={setCurrentProject} />
+        <EmailContent></EmailContent>
       </MacWindow>
     </Draggable>
   );
@@ -41,8 +39,7 @@ const MacWindow = styled.div`
   background-color: rgb(36, 36, 36);
   border-radius: 7px;
   border: 1px solid grey;
-  float: left;
-  position: fixed;
+  float: right;
 `;
 
 const TopBarComponent = styled.div`
@@ -92,4 +89,4 @@ const Description = styled.p`
   font-weight: bold;
 `;
 
-export default ProjectWindow;
+export default EmailWindow;
