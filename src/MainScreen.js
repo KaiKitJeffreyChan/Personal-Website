@@ -83,8 +83,6 @@ function MainScreen() {
         />
       ) : null}
 
-      <div id="portal"> </div>
-
       <div id="bottomBar">
         <Bottom toggleProject={toggleProject} toggleEmail={toggleEmail} />
       </div>
