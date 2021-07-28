@@ -4,7 +4,7 @@ import Draggable from "react-draggable";
 import EmailContent from "./EmailContent";
 import "./Email.css";
 
-const EmailWindow = (props) => {
+const EmailWindow = ({ toggleEmail, bringFrontEmail }) => {
   const minimizePressed = () => {
     console.log("minimizePressed");
     // setWindowStage("MINIMIZED");
@@ -16,10 +16,10 @@ const EmailWindow = (props) => {
 
   return (
     <Draggable bounds="parent" handle="section" id="main">
-      <MacWindow>
+      <MacWindow onClick={bringFrontEmail}>
         <section>
           <TopBarComponent>
-            <RedCircle className="redButton" onClick={props.toggleEmail} />
+            <RedCircle className="redButton" onClick={toggleEmail} />
             <YellowCircle className="yellowButton" onClick={minimizePressed} />
             <GreenCircle className="greenButton" onClick={maximizePressed} />
             <Description>Contact</Description>
@@ -36,10 +36,13 @@ const EmailWindow = (props) => {
 const MacWindow = styled.div`
   height: 600px;
   width: 700px;
+  right: 0;
+  top: 5;
   background-color: rgb(36, 36, 36);
   border-radius: 7px;
   border: 1px solid grey;
   float: right;
+  position: fixed;
 `;
 
 const TopBarComponent = styled.div`

@@ -4,7 +4,7 @@ import Draggable from "react-draggable";
 import ProjectContent from "./ProjectContent";
 import ProjectCard from "./ProjectCard";
 
-const ProjectWindow = (props) => {
+const ProjectWindow = ({ toggleProject, bringFrontProject }) => {
   const [currentProject, setCurrentProject] = useState("");
   const minimizePressed = () => {
     console.log("minimizePressed");
@@ -17,10 +17,10 @@ const ProjectWindow = (props) => {
 
   return (
     <Draggable bounds="parent" handle="section" id="main">
-      <MacWindow>
+      <MacWindow onClick={bringFrontProject}>
         <section>
           <TopBarComponent>
-            <RedCircle className="redButton" onClick={props.toggleProject} />
+            <RedCircle className="redButton" onClick={toggleProject} />
             <YellowCircle className="yellowButton" onClick={minimizePressed} />
             <GreenCircle className="greenButton" onClick={maximizePressed} />
             <Description>My Projects</Description>

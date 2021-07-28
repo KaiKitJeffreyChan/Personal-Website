@@ -61,7 +61,7 @@ a:active {
 .form__group {
   position: relative;
   padding: 15px 0 0 50px;
-  margin-top: 10px;
+  margin-top: 20px;
   width: 90%;
 }
 
@@ -114,4 +114,36 @@ a:active {
 .form__field:required,
 .form__field:invalid {
   box-shadow: none;
+}
+
+.blank_box {
+  width: 95%;
+  height: 320px;
+  border: none;
+  background-color: transparent;
+  resize: none;
+  color: white;
+}
+
+textarea {
+  padding: 10px;
+}
+
+.submit_button {
+  float: right;
+  margin-right: 60px;
+  margin-top: 30px;
+  background: grey;
+  border-radius: 6px;
+  border: 0;
+  color: white;
+  height: 48;
+  padding: 2px 20px 2px 20px;
+}
+
+textarea:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
 }

@@ -21,9 +21,9 @@ export default function EmailContent() {
     emailjs
       .sendForm(
         "service_y9qqlzi",
-        "template_hd79vrd",
+        "template_pqzb4eo",
         e.target,
-        "user_d35XBXtuS72cq1Zmyop83"
+        "user_BXSvTKrdFriWWsW8WpYxi"
       )
       .then(
         (result) => {

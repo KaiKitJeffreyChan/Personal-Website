@@ -13,7 +13,7 @@ const ProjectCard = (props) => {
   const currentSelectedProject = projectData.find(
     (project) => project.name === props.currentProject
   );
-  console.log(currentSelectedProject);
+
   return (
     <CardContainer>
       {currentSelectedProject ? (
