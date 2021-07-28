@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Personal-Website/static/css/main.c17be01c.chunk.css",
+    "main.js": "/Personal-Website/static/js/main.a6202dd1.chunk.js",
+    "main.js.map": "/Personal-Website/static/js/main.a6202dd1.chunk.js.map",
+    "runtime-main.js": "/Personal-Website/static/js/runtime-main.803e8fc7.js",
+    "runtime-main.js.map": "/Personal-Website/static/js/runtime-main.803e8fc7.js.map",
+    "static/css/2.6d844947.chunk.css": "/Personal-Website/static/css/2.6d844947.chunk.css",
+    "static/js/2.12c6b796.chunk.js": "/Personal-Website/static/js/2.12c6b796.chunk.js",
+    "static/js/2.12c6b796.chunk.js.map": "/Personal-Website/static/js/2.12c6b796.chunk.js.map",
+    "index.html": "/Personal-Website/index.html",
+    "static/css/2.6d844947.chunk.css.map": "/Personal-Website/static/css/2.6d844947.chunk.css.map",
+    "static/css/main.c17be01c.chunk.css.map": "/Personal-Website/static/css/main.c17be01c.chunk.css.map",
+    "static/js/2.12c6b796.chunk.js.LICENSE.txt": "/Personal-Website/static/js/2.12c6b796.chunk.js.LICENSE.txt",
+    "static/media/Colorful.7407aaac.png": "/Personal-Website/static/media/Colorful.7407aaac.png",
+    "static/media/course.81cafc21.png": "/Personal-Website/static/media/course.81cafc21.png",
+    "static/media/mac-logo.0b8cc0ad.png": "/Personal-Website/static/media/mac-logo.0b8cc0ad.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.803e8fc7.js",
+    "static/css/2.6d844947.chunk.css",
+    "static/js/2.12c6b796.chunk.js",
+    "static/css/main.c17be01c.chunk.css",
+    "static/js/main.a6202dd1.chunk.js"
+  ]
+}
