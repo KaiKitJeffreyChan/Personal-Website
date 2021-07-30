@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import projectData from "./ProjectData";
-import course_api from "./projectImages/course.png";
+
 // import spotify from "./projectImages/spotify.png";
 // import stickfall from "./projectImages/stickfall.png";
 // import htn from "./projectImages/htn.png";
@@ -19,7 +19,9 @@ const ProjectCard = (props) => {
       {currentSelectedProject ? (
         <div className="zoom">
           <Image className="fill">
-            <img src={course_api} alt={currentSelectedProject.name} />
+            <img
+              src={`${process.env.PUBLIC_URL}/projectImages/${currentSelectedProject.img}`}
+            />
           </Image>
           <a
             href={currentSelectedProject.github}
