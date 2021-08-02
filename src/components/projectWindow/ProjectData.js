@@ -13,7 +13,7 @@ const projectData = [
     github: "https://github.com/KaiKitJeffreyChan/Scribble-Clone",
     description:
       "Using Socket.io, express, and React, created a live online chatting application",
-    img: "course.png",
+    img: "chat.png",
   },
   {
     id: "course_automation",
@@ -21,7 +21,7 @@ const projectData = [
     github: "https://github.com/KaiKitJeffreyChan/Course_Checker",
     description:
       "Using Selenium and Twillio, created an application for students at McMaster, that automates the course enrollment process and sends a SMS when completed",
-    img: "course.png",
+    img: "course_auto.png",
   },
   {
     id: "spotify",

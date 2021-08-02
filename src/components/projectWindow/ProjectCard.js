@@ -21,6 +21,7 @@ const ProjectCard = (props) => {
           <Image className="fill">
             <img
               src={`${process.env.PUBLIC_URL}/projectImages/${currentSelectedProject.img}`}
+              alt={currentSelectedProject.id}
             />
           </Image>
           <a
