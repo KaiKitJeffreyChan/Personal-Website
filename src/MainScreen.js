@@ -17,7 +17,7 @@ function useWindowSize() {
   return size;
 }
 
-function MainScreen() {
+const MainScreen = () => {
   // const [height, width] = useWindowSize();
   const [Project, setProject] = useState(false);
   const [Email, setEmail] = useState(false);
@@ -88,6 +88,6 @@ function MainScreen() {
       </div>
     </div>
   );
-}
+};
 
 export default MainScreen;

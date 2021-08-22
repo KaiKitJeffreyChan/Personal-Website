@@ -36,10 +36,7 @@ const Bottom = (props) => {
         </Button>
       </Tooltip>
       <Tooltip title="Linkedin">
-        <Button
-          target="_blank"
-          href="https://www.linkedin.com/in/jeffrey-chan-9974711ab/"
-        >
+        <Button target="_blank" href="https://www.linkedin.com/in/kkjc/">
           <Icon4>
             <img
               alt="Linkedin"
