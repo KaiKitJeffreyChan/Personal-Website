@@ -47,6 +47,14 @@ const projectData = [
       "Developed a 2D platformer, leveraging OOP princples to develop a well structured and modular code base",
     img: "stickfall.png",
   },
+  {
+    id: "maccheck",
+    name: "McMaster Course Automation",
+    github: "https://github.com/KaiKitJeffreyChan/",
+    description:
+      "Created a course automation website for students at McMaster University, allowing students to schedule their course enrollment time or get into courses with unknown opening times.",
+    img: "stickfall.png",
+  },
 ];
 
 module.exports = projectData;
