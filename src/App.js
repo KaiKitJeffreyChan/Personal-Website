@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route exact path="/Personal-Website" component={MainScreen} />
+          <Route exact path="/" component={MainScreen} />
           <Route
             exact
             path="/Personal-Website/Mainscreen"
