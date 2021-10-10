@@ -4,7 +4,7 @@ import Draggable from "react-draggable";
 import ProjectContent from "./ProjectContent";
 import ProjectCard from "./ProjectCard";
 
-const ProjectWindow = ({ toggleProject, bringFrontProject }) => {
+const ProjectWindow = ({ toggleProject, bringFrontProject, currentWindow }) => {
   const [currentProject, setCurrentProject] = useState("");
   const minimizePressed = () => {
     console.log("minimizePressed");
@@ -14,10 +14,11 @@ const ProjectWindow = ({ toggleProject, bringFrontProject }) => {
     console.log("maximizePressed");
     // setWindowStage("MAXIMIZED");
   };
+  console.log(currentWindow);
 
   return (
     <Draggable bounds="parent" handle="section" id="main">
-      <MacWindow onClick={bringFrontProject}>
+      <MacWindow onClick={bringFrontProject} currentWindow={currentWindow}>
         <section>
           <TopBarComponent>
             <RedCircle className="redButton" onClick={toggleProject} />
@@ -43,6 +44,7 @@ const MacWindow = styled.div`
   border: 1px solid grey;
   float: left;
   position: fixed;
+      z-index: ${({ currentWindow }) => (currentWindow === "Project") ? "200" : "10"};
 `;
 
 const TopBarComponent = styled.div`

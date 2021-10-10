@@ -26,10 +26,6 @@ class App extends Component {
       </Router>
     );
 
-    // <div className="App">
-    //   <TextAnimation></TextAnimation>
-    //   <MainScreen />
-    // </div>
   }
 }
 

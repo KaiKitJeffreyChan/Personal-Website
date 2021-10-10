@@ -64,6 +64,7 @@ const Label = styled.li`
   /* padding: 5px 0px 5px 10px; */
   padding-left: 10px;
   padding-top: 5px;
+  padding-bottom: 5px;
 `;
 
 export default ProjectContent;

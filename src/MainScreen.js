@@ -5,6 +5,7 @@ import image from "./pictures/Colorful.png";
 import Bottom from "./components/bottomBar/Bottom";
 import ProjectWindow from "./components/projectWindow/ProjectWindow";
 import EmailWindow from "./components/emailWindow/EmailWindow";
+import DesktopContent from "./components/desktopContent/DesktopContent"
 
 function useWindowSize() {
   const [size, setSize] = useState([window.innerHeight]);
@@ -69,18 +70,21 @@ const MainScreen = () => {
       <div id="topBar">
         <MainNav currentlyPressed={openWindows[0]} />
       </div>
+      <DesktopContent />
       {Email ? (
         <EmailWindow
           toggleEmail={toggleEmail}
           bringFrontEmail={bringFrontEmail}
-          className="email"
+          currentlyPressed={openWindows[0]}
         />
       ) : null}
       {Project ? (
         <ProjectWindow
           toggleProject={toggleProject}
           bringFrontProject={bringFrontProject}
+          currentlyPressed={openWindows[0]}
         />
+
       ) : null}
 
       <div id="bottomBar">
