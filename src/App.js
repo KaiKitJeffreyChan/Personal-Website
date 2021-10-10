@@ -17,11 +17,11 @@ class App extends Component {
           <Route exact path="/" component={MainScreen} />
           <Route
             exact
-            path="/Personal-Website/Mainscreen"
+            path="/Mainscreen"
             component={MainScreen}
           />
-          <Route exact path="/Personal-Website/404" component={NotFound} />
-          <Redirect to="/Personal-Website/404" />
+          <Route exact path="/404" component={NotFound} />
+          <Redirect to="/404" />
         </Switch>
       </Router>
     );
