@@ -6,6 +6,7 @@ import Bottom from "./components/bottomBar/Bottom";
 import ProjectWindow from "./components/projectWindow/ProjectWindow";
 import EmailWindow from "./components/emailWindow/EmailWindow";
 import DesktopContent from "./components/desktopContent/DesktopContent"
+import "./MainScreen.css"
 
 function useWindowSize() {
   const [size, setSize] = useState([window.innerHeight]);

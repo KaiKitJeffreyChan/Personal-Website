@@ -26,8 +26,14 @@ const DesktopContent = () => {
 }
 
 const Title = styled.h1`
-padding-left: 5%;
-padding-top: 5%;
+    padding-left: 5%;
+    padding-top: 5%;
+    /* position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    display:block; */
 `
 
 const TypeWriterCss = styled.div`

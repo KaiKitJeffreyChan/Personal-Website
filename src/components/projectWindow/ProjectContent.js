@@ -11,7 +11,7 @@ const ProjectContent = (props) => {
     "Spotify Player",
     "Hack the North App",
     "Stickfall LibGDX Game",
-    "McMaster Course Automation"
+    "MacEnroll"
   ];
 
   const thisWasClicked = (title) => {

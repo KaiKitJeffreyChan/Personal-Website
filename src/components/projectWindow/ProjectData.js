@@ -48,12 +48,12 @@ const projectData = [
     img: "stickfall.png",
   },
   {
-    id: "maccheck",
-    name: "McMaster Course Automation",
+    id: "macenroll",
+    name: "MacEnroll",
     github: "https://github.com/KaiKitJeffreyChan/",
     description:
       "Created a course automation website for students at McMaster University, allowing students to schedule their course enrollment time or get into courses with unknown opening times.",
-    img: "stickfall.png",
+    img: "macEnroll.png",
   },
 ];
 
