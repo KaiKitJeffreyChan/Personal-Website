@@ -55,6 +55,13 @@ const projectData = [
       "Created a course automation website for students at McMaster University, allowing students to schedule their course enrollment time or get into courses with unknown opening times.",
     img: "macEnroll.png",
   },
+  {
+    id: "u.gg",
+    name: "U.GG Frontend Project",
+    github: "https://github.com/KaiKitJeffreyChan/u.gg-takehome",
+    description: "Created a frontend static webpage from Figma designs",
+    img: "onlyguides.png",
+  }
 ];
 
 module.exports = projectData;
