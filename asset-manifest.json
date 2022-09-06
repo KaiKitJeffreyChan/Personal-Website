@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Personal-Website/static/css/main.78e84fca.css",
-    "main.js": "/Personal-Website/static/js/main.1fc9866e.js",
-    "static/media/Colorful.png": "/Personal-Website/static/media/Colorful.7407aaac97491b71d335.png",
-    "static/media/mac-logo.png": "/Personal-Website/static/media/mac-logo.0b8cc0adbd187e72a0bd.png",
-    "index.html": "/Personal-Website/index.html",
-    "main.78e84fca.css.map": "/Personal-Website/static/css/main.78e84fca.css.map",
-    "main.1fc9866e.js.map": "/Personal-Website/static/js/main.1fc9866e.js.map"
+    "main.css": "/static/css/main.78e84fca.css",
+    "main.js": "/static/js/main.e1f51745.js",
+    "static/media/Colorful.png": "/static/media/Colorful.7407aaac97491b71d335.png",
+    "static/media/mac-logo.png": "/static/media/mac-logo.0b8cc0adbd187e72a0bd.png",
+    "index.html": "/index.html",
+    "main.78e84fca.css.map": "/static/css/main.78e84fca.css.map",
+    "main.e1f51745.js.map": "/static/js/main.e1f51745.js.map"
   },
   "entrypoints": [
     "static/css/main.78e84fca.css",
-    "static/js/main.1fc9866e.js"
+    "static/js/main.e1f51745.js"
   ]
 }
