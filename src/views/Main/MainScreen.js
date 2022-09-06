@@ -1,26 +1,14 @@
 import React, { useState, useEffect } from "react";
 // import styled from "styled-components";
-import MainNav from "./components/navbar/Navbar";
-import image from "./pictures/Colorful.png";
-import Bottom from "./components/bottomBar/Bottom";
-import ProjectWindow from "./components/projectWindow/ProjectWindow";
-import EmailWindow from "./components/emailWindow/EmailWindow";
-import DesktopContent from "./components/desktopContent/DesktopContent"
-import "./MainScreen.css"
-
-function useWindowSize() {
-  const [size, setSize] = useState([window.innerHeight]);
-  useEffect(() => {
-    const handleResize = () => {
-      setSize([window.innerHeight, window.innerWidth]);
-    };
-    window.addEventListener("resize", handleResize);
-  }, []);
-  return size;
-}
+import MainNav from "../../components/navbar/Navbar";
+import image from "../../pictures/Colorful.png";
+import Bottom from "../../components/bottomBar/Bottom";
+import ProjectWindow from "../../components/projectWindow/ProjectWindow";
+import EmailWindow from "../../components/emailWindow/EmailWindow";
+import DesktopContent from "../../components/desktopContent/DesktopContent"
+import "./MainScreen.scss"
 
 const MainScreen = () => {
-  // const [height, width] = useWindowSize();
   const [Project, setProject] = useState(false);
   const [Email, setEmail] = useState(false);
   const [openWindows, setOpenWindows] = useState([]);

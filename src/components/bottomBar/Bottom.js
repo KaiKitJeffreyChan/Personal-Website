@@ -71,12 +71,12 @@ const Bottom = (props) => {
 
 const BottomBar = styled.div`
   text-align: center;
-  position: fixed;
+  position: absolute;
   width: 500px;
   left: 50%;
   height: 55px;
-  bottom: 0px;
-  border-radius: 6px 6px 0 0;
+  bottom: 3px;
+  border-radius: 6px;
   background: #666666;
   opacity: 0.8;
   box-sizing: border-box;

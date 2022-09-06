@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import MainScreen from "./MainScreen";
-import NotFound from "./404.js";
+import MainScreen from "./views/Main/MainScreen";
+import NotFound from "./views/404/404.js";
+import Introduction from "./views/Intro/introduction.js";
 
 import {
   BrowserRouter as Router,
@@ -14,7 +15,7 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route exact path="/" component={MainScreen} />
+          <Route exact path="/login" component={Introduction} />
           <Route
             exact
             path="/Mainscreen"

@@ -2,13 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import projectData from "./ProjectData";
 
-// import spotify from "./projectImages/spotify.png";
-// import stickfall from "./projectImages/stickfall.png";
-// import htn from "./projectImages/htn.png";
-// import course_automation
-// import chat_app
-// import course_automation
-
 const ProjectCard = (props) => {
   const currentSelectedProject = projectData.find(
     (project) => project.name === props.currentProject

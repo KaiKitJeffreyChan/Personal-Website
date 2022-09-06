@@ -1,5 +1,5 @@
 {
-  "homepage": "http://KaiKitJeffreyChan.github.io/Personal-Website",
+  "homepage": "http://kaikitjeffreychan.com",
   "name": "personal-website",
   "version": "0.1.0",
   "private": true,
@@ -18,8 +18,8 @@
     "react-moment": "^1.1.1",
     "react-portal": "^4.2.1",
     "react-resizable": "^1.11.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1",
+    "react-router-dom": "^5.3.3",
+    "react-scripts": "^5.0.1",
     "react-terminal-ui": "^0.1.9",
     "react-time": "^4.3.0",
     "react-typical": "^0.1.3",
@@ -55,6 +55,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^4.0.0",
+    "sass": "^1.54.7"
   }
 }
