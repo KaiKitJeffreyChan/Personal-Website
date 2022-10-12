@@ -28,6 +28,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "format": "npx prettier --write .",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
