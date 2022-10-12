@@ -2,14 +2,55 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
 
   .login-container-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     .user {
-      .image-icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .image-container {
         border-radius: 50%;
-        height: 100px;
-        width: 100px;
+        height: 150px;
+        width: 150px;
+        overflow: hidden;
+        margin-bottom: 20px;
+
+        .image-icon {
+          height: 150px;
+          width: 150px;
+        }
       }
+
+      .name {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-shadow: 2px 2px #ff0000;
+      }
+
+      .login-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 12px 0px;
+        width: 86px;
+        height: 24px;
+        border-radius: 6px;
+        background-color: #f1f5f9;
+        text-decoration: none;
+      }
+    }
+
+    .description {
+      color: white;
     }
   }
 }

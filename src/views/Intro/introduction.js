@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import background from "../../pictures/wallpaper.jpg";
-import selfie from "../../pictures/my_picture.jpg";
+import selfie from "../../pictures/penguin.png";
 
 import "./introduction.scss";
 const Introduction = () => {
@@ -16,7 +16,9 @@ const Introduction = () => {
     >
       <div className="login-container-content">
         <div className="user">
-          <img className="image-icon" src={selfie}></img>
+          <div className="image-container">
+            <img className="image-icon" src={selfie}></img>
+          </div>
           <div className="name">Jeffrey Chan</div>
           <Link className="login-button" to="/">
             Login
