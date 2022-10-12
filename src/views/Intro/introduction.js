@@ -20,7 +20,7 @@ const Introduction = () => {
             <img className="image-icon" src={selfie}></img>
           </div>
           <div className="name">Jeffrey Chan</div>
-          <Link className="login-button" to="/">
+          <Link className="login-button" to="/main">
             Login
           </Link>
         </div>
