@@ -61,7 +61,7 @@ const projectData = [
     github: "https://github.com/KaiKitJeffreyChan/u.gg-takehome",
     description: "Created a frontend static webpage from Figma designs",
     img: "onlyguides.png",
-  }
+  },
 ];
 
 module.exports = projectData;

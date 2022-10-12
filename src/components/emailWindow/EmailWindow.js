@@ -43,7 +43,8 @@ const MacWindow = styled.div`
   border: 1px solid grey;
   float: right;
   position: fixed;
-  z-index: ${({ currentlyPressed }) => (currentlyPressed === "Email") ? "200" : "10"};
+  z-index: ${({ currentlyPressed }) =>
+    currentlyPressed === "Email" ? "200" : "10"};
 `;
 
 const TopBarComponent = styled.div`

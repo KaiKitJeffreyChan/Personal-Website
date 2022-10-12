@@ -89,11 +89,11 @@ const Icon1 = styled.div`
   position: relative;
   display: flex;
   bottom: 0px;
-
   width: 45px;
   height: 45px;
   border-radius: 7px;
 `;
+
 const Icon2 = styled.div`
   position: relative;
   display: flex;

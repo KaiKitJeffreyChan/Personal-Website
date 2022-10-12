@@ -1,10 +1,13 @@
-
 .desktop body {
-font-family: 'Cardo', serif;
+  font-family: "Cardo", serif;
 }
 
-
-.desktop h1, h2, h3, h4, h5, h6 {
-font-family: 'Oswald', sans-serif;
-text-transform: uppercase;
+.desktop h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
 }

@@ -5,8 +5,8 @@ import image from "../../pictures/Colorful.png";
 import Bottom from "../../components/bottomBar/Bottom";
 import ProjectWindow from "../../components/projectWindow/ProjectWindow";
 import EmailWindow from "../../components/emailWindow/EmailWindow";
-import DesktopContent from "../../components/desktopContent/DesktopContent"
-import "./MainScreen.scss"
+import DesktopContent from "../../components/desktopContent/DesktopContent";
+import "./MainScreen.scss";
 
 const MainScreen = () => {
   const [Project, setProject] = useState(false);
@@ -73,7 +73,6 @@ const MainScreen = () => {
           bringFrontProject={bringFrontProject}
           currentlyPressed={openWindows[0]}
         />
-
       ) : null}
 
       <div id="bottomBar">

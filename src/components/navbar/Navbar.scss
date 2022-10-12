@@ -8,7 +8,7 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  
+
   .navbar-left {
     display: flex;
     align-items: center;
@@ -17,7 +17,7 @@
       margin: 0px 16px;
     }
 
-    .current-tab{
+    .current-tab {
       color: white;
       font-size: 13px;
     }
@@ -36,5 +36,4 @@
       margin-right: 10px;
     }
   }
-
 }

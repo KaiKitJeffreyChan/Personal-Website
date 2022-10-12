@@ -2,7 +2,6 @@ import styled from "styled-components";
 import "./Project.css";
 
 const ProjectContent = (props) => {
-
   //Fix this method of sidebar vs content displayed
   const titles = [
     "McMaster Course API",
@@ -12,7 +11,7 @@ const ProjectContent = (props) => {
     "Hack the North App",
     "Stickfall LibGDX Game",
     "MacEnroll",
-    "U.GG Frontend Project"
+    "U.GG Frontend Project",
   ];
 
   const thisWasClicked = (title) => {

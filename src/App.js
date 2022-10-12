@@ -16,17 +16,12 @@ class App extends Component {
       <Router>
         <Switch>
           <Route exact path="/login" component={Introduction} />
-          <Route
-            exact
-            path="/Mainscreen"
-            component={MainScreen}
-          />
+          <Route exact path="/" component={MainScreen} />
           <Route exact path="/404" component={NotFound} />
           <Redirect to="/404" />
         </Switch>
       </Router>
     );
-
   }
 }
 
