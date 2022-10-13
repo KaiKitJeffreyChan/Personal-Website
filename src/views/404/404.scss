@@ -1,17 +1,31 @@
 .page-404 {
+  height: 100vh;
+  width: auto;
   display: flex;
-  align-content: center;
-  justify-items: center;
+  align-items: center;
 
   .not-found-container {
-    height: 500px;
-    width: 600px;
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-items: center;
+    margin-left: 10%;
 
-    .button {
+    .header {
+      font-size: 3em;
+      font-weight: 900;
+      color: white;
+    }
+
+    .link {
+      text-decoration: none;
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30px;
+      background-color: white;
+      border-radius: 6px;
+      border: none;
+      color: gray;
     }
   }
 }

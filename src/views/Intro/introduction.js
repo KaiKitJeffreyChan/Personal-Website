@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import background from "../../pictures/wallpaper.jpg";
+import background from "../../pictures/Colorful.png";
 import selfie from "../../pictures/penguin.png";
 
 import "./introduction.scss";

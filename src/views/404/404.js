@@ -1,6 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import image from "../../pictures/Colorful.png";
+import { Link } from "react-router-dom";
 import "./404.scss";
 
 const NotFound = (props) => {
@@ -14,8 +14,9 @@ const NotFound = (props) => {
       }}
     >
       <div className="not-found-container">
-        <div className="header">404 page not found</div>
-        <button className="button">Return To Home</button>
+        <div className="header">404 Page Not Found</div>
+
+        <Link className="link" to="/main">Return To Home</Link>
       </div>
     </div>
   );
