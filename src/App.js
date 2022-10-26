@@ -4,7 +4,7 @@ import NotFound from "./views/404/404.js";
 import Introduction from "./views/Intro/introduction.js";
 
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Route,
   Switch,
   Redirect,
