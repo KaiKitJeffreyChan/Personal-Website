@@ -19,7 +19,13 @@ const EmailWindow = ({ toggleEmail, bringFrontEmail, currentlyPressed }) => {
       <MacWindow onClick={bringFrontEmail} currentlyPressed={currentlyPressed}>
         <section>
           <TopBarComponent>
-            <RedCircle className="redButton" onClick={toggleEmail} />
+            <RedCircle
+              className="redButton"
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleEmail();
+              }}
+            />
             <YellowCircle className="yellowButton" onClick={minimizePressed} />
             <GreenCircle className="greenButton" onClick={maximizePressed} />
             <Description>Contact</Description>

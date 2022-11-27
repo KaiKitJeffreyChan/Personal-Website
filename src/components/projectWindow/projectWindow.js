@@ -27,7 +27,13 @@ const ProjectWindow = ({
       >
         <section>
           <TopBarComponent>
-            <RedCircle className="redButton" onClick={toggleProject} />
+            <RedCircle
+              className="redButton"
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleProject();
+              }}
+            />
             <YellowCircle className="yellowButton" onClick={minimizePressed} />
             <GreenCircle className="greenButton" onClick={maximizePressed} />
             <Description>My Projects</Description>
