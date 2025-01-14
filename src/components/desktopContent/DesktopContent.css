@@ -1,5 +1,11 @@
-.desktop body {
+.desktop {
   font-family: "Cardo", serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-button {
+  font-family: "Oswald", sans-serif;
 }
 
 .desktop h1,
