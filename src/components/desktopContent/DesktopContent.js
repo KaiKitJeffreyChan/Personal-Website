@@ -26,7 +26,7 @@ const DesktopContent = () => {
         </h5>
       </TypeWriterCss>
       <ResumeButton
-        href="/path/to/your/resume.pdf"
+        href="https://drive.google.com/file/d/1vBZvVMZReMWrpgvkTPRYlS6NdOUHDVfo/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
         className="resume-button"
@@ -48,16 +48,17 @@ const Title = styled.h1`
     display:block; */
 `;
 
-const ResumeButton = styled.div`
+const ResumeButton = styled.a`
   margin-top: 20px;
   margin-left: 5%;
   font-size: 16px;
   height: 36px;
   width: 100px;
   display: flex;
+  color: white !important;
+  user-select: none;
   justify-content: center;
   align-items: center;
-  color: white;
   background-color: #333;
   border: none;
   border-radius: 2px;
