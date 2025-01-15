@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.ee8157ec.css",
-    "main.js": "/static/js/main.a1308006.js",
+    "main.css": "/static/css/main.c10253c2.css",
+    "main.js": "/static/js/main.9e54b762.js",
     "static/media/penguin.png": "/static/media/penguin.1bcb51d3fbf30ea17fbe.png",
     "static/media/Colorful.png": "/static/media/Colorful.7407aaac97491b71d335.png",
     "static/media/mac-logo.png": "/static/media/mac-logo.0b8cc0adbd187e72a0bd.png",
     "index.html": "/index.html",
-    "main.ee8157ec.css.map": "/static/css/main.ee8157ec.css.map",
-    "main.a1308006.js.map": "/static/js/main.a1308006.js.map"
+    "main.c10253c2.css.map": "/static/css/main.c10253c2.css.map",
+    "main.9e54b762.js.map": "/static/js/main.9e54b762.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee8157ec.css",
-    "static/js/main.a1308006.js"
+    "static/css/main.c10253c2.css",
+    "static/js/main.9e54b762.js"
   ]
 }
